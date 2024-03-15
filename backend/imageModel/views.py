@@ -17,8 +17,5 @@ class ImageModelView(APIView):
         
         output_path = colorize(image_path)
         
-        output = open(output_path, "rb")
-        response = FileResponse(output, content_type="image/jpeg")
-        output.close()
+        return FileResponse(open(output_path, "rb"), content_type="image/jpeg")
         
-        return response
