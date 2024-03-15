@@ -1,0 +1,42 @@
+.upperHero
+{
+    width:100vw;
+    height:50vh;
+}
+
+.vitalyze
+{
+    width:100%;
+    font-size: 12rem;
+    color:white;
+    text-align:center;
+}
+
+.svgLeft
+{
+    position:absolute;
+    top:25%;
+    left:7%;
+}
+
+.svgRight
+{
+    position:absolute;
+    top:5%;
+    right:7%;
+}
+
+.vitalyzeSubText
+{
+    color:white;
+    font-size:1.2rem;
+    width:100%;
+    text-align: center;
+}
+
+.colourized
+{
+    background: -webkit-linear-gradient(180deg,#02ff24, #06dcf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
