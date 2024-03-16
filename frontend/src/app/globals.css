@@ -24,6 +24,8 @@ body {
 
 .App {
     overflow: hidden;
+    background-color: #100e0e;
+    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 }
 
 .gradientBox {

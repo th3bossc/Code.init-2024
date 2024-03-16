@@ -5,5 +5,23 @@
     align-items: center;
     height:100vh;
     width:100vw;
+}
+
+.generated
+{
+    height:70vh;
+    width:60vw;
+    border-radius: 20px;
     background-color: white;
 }
+
+.generatedImage
+{
+    width:30vw;
+    padding:10px;
+    height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
