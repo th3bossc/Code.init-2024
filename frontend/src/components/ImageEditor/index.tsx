@@ -2,36 +2,48 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
-import domtoimage from 'dom-to-image';
 import Slider from '@mui/material/Slider';
+import * as htmlToImage from 'html-to-image';
+import Button from "@/components/Button";
+
 const ImageEditor = () => {
     const editedImage = useRef(null);
-    const [saturation, setSaturation] = useState(100);
-    const [hue, setHue] = useState(0);
-    const [contrast, setContrast] = useState(100);
 
-    const handleSaturationChange = (e: any) => {
-        setSaturation(e.target.value);
-    }
+    const [filter, setFilter] = useState({
+        saturation: 100,
+        hue: 0,
+        contrast: 100,
+    });
 
-    const handleHueChange = (e: any) => {
-        setHue(e.target.value);
-    }
 
-    const handleContrastChange = (e: any) => {
-        setContrast(e.target.value);
+    const handleChange = (e: any) => {
+        setFilter(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+        }))
     }
 
     const downloadJpg = async () => {
         if (!editedImage.current)
             return;
-        const dataUrl = await domtoimage.toJpeg(editedImage.current, { quality: 0.95 });
+
+        const dataUrl = await htmlToImage.toJpeg(editedImage.current);
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = 'test.jpg';
+        link.click();
 
     }
 
     const downloadPng = async () => {
         if (!editedImage.current)
             return;
+
+        const dataUrl = await htmlToImage.toPng(editedImage.current);
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = 'test.png';
+        link.click();
 
     }
 
@@ -45,9 +57,9 @@ const ImageEditor = () => {
                     height={500}
                     style={{
                         filter: `
-                            saturate(${saturation}%) 
-                            hue-rotate(${hue}deg)
-                            contrast(${contrast}%)
+                            saturate(${filter.saturation}%) 
+                            hue-rotate(${filter.hue}deg)
+                            contrast(${filter.contrast}%)
                         `
 
                     }}
@@ -57,37 +69,37 @@ const ImageEditor = () => {
             <div className="w-full h-full flex justify-center items-center flex-col">
                 <Slider
                     name="saturation"
-                    value={saturation}
+                    value={filter.saturation}
                     defaultValue={100}
                     step={10}
                     marks
                     min={0}
                     max={200}
-                    onChange={handleSaturationChange}
+                    onChange={handleChange}
                 />
                 <Slider
                     name="hue"
-                    value={hue}
+                    value={filter.hue}
                     defaultValue={100}
                     step={20}
                     marks
                     min={0}
                     max={360}
-                    onChange={handleHueChange}
+                    onChange={handleChange}
                 />
                 <Slider
                     name="contrast"
-                    value={contrast}
+                    value={filter.contrast}
                     defaultValue={100}
                     step={10}
                     marks
                     min={0}
                     max={200}
-                    onChange={handleContrastChange}
+                    onChange={handleChange}
                 />
             </div>
-            <button onClick={downloadPng}> PNG </button>
-            <button onClick={downloadJpg}> JPG </button>
+            <Button onClick={downloadPng} text="PNG" />
+            <Button onClick={downloadJpg} text="JPG" />
         </div>
     )
 }
