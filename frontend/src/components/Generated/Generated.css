@@ -7,17 +7,16 @@
 }
 
 .generated {
-    height: 70vh;
     width: 60vw;
     border-radius: 20px;
     background-color: white;
+    box-shadow: 0 0 15px rgb(214, 211, 211);
     display: flex;
 }
 
 .generatedImage {
     width: 100%;
-    padding: 10px;
-    height: 70vh;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
