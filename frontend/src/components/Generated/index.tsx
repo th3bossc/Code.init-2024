@@ -1,24 +1,26 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import { downloadImage } from "@/lib";
+import Button from "../Button";
 import "./Generated.css";
 import ReactCompareImage from 'react-compare-image';
 
-export default function Generated() {
-    const [animate, setAnimate] = useState(100);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setAnimate((prev) => prev - 1);
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
-
+export default function Generated({
+    original,
+    generated
+}: {
+    original: string | null,
+    generated: string | null
+}) {
     return (
         <div className="generatedContainer">
             <div className="generated">
                 <div className="generatedImage">
-                    <ReactCompareImage leftImage="/HeroArtGray.png" sliderLineWidth={1} rightImage="/HeroArt.jpg" handleSize={18} />
+                    <ReactCompareImage leftImage={original || ""} sliderLineWidth={1} rightImage={generated || ""} handleSize={18} />
+                </div>
+                <div className="flex justify-center items-center w-full px-16">
+                    <Button text="Download" invert onClick={() => downloadImage(generated || "")} />
+                    <Button text="Edit" invert href={`/edit`} />
                 </div>
             </div>
         </div>

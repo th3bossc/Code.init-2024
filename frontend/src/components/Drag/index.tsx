@@ -7,7 +7,7 @@ import bottomRightSVG from "/public/bottomRightSVG.svg";
 import "./Drag.css"
 import { Dispatch, SetStateAction, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { colourizeImage } from "@/lib";
+import { colourizeImage, saveImage } from "@/lib";
 
 
 
@@ -29,6 +29,8 @@ export default function Drag({
             setFile(selectedFile);
             const img = await colourizeImage(selectedFile);
             setGeneratedImage(img);
+            if (img)
+                saveImage(img);
         },
         accept: {
             'image/*': []

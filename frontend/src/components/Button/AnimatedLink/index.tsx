@@ -8,7 +8,6 @@ const AnimatedLink = ({ title, href, hover, invert }: { title: string, href?: st
         <a
             className="relative cursor-pointer overflow-hidden font-inherit block"
             href={href}
-            target="_blank"
         >
             <AnimatedText title={title} top={true} hovered={hover} invert={invert} />
             <div className="absolute top-0 w-full">

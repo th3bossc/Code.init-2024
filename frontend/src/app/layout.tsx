@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Marck_Script, Playball, Inter } from "next/font/google";
 import localFont from 'next/font/local';
 import "./globals.css";
-import HeroSection from "@/components/HeroSection";
-import Footer from "@/components/Footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -62,21 +60,17 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
-    return (
-      <html lang="en">
-        <body className={`${inter.className} ${marckScript.variable} ${NeueMontrealRegular.variable} ${NeueMontrealBold.variable} ${helveticaNowDisplay.variable} ${playBall.variable}  ${helveticaBold.variable} ${helveticaNowDisplayItalic}`} >
-          <div className="App">
-            <HeroSection />
-            {children}
-            <Footer />
-          </div>
-        </body>
-      </html>
-    );
-  }
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${inter.className} ${marckScript.variable} ${NeueMontrealRegular.variable} ${NeueMontrealBold.variable} ${helveticaNowDisplay.variable} ${playBall.variable}  ${helveticaBold.variable} ${helveticaNowDisplayItalic}`} >
+        {children}
+      </body>
+    </html>
+  );
+}
 
 

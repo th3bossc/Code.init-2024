@@ -7,7 +7,7 @@ const useScrollPoition = ({
 }) => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [height, setHeight] = useState(ref.current?.scrollHeight || 0);
-    const [windowHeight, setWindowHeight] = useState(window?.innerHeight || 0);
+    const [windowHeight, setWindowHeight] = useState(0);
     useEffect(() => {
         const updatePosition = () => {
             if (ref.current && window) {

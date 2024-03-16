@@ -4,14 +4,17 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    flex-direction: column;
 }
 
 .generated {
     width: 60vw;
     border-radius: 20px;
-    background-color: white;
-    box-shadow: 0 0 15px rgb(214, 211, 211);
+    background-color: #fff;
+    /* box-shadow: 0 0 15px rgb(214, 211, 211); */
     display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .generatedImage {
