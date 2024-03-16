@@ -22,9 +22,23 @@ const playBall = Playball({
 
 const helveticaNowDisplay = localFont({
     display: 'swap',
-    src: '../../public/HelveticaNowDisplay-ThinIta.ttf',
+    src: '../../public/HelveticaNowDisplay-Thin.ttf',
     variable: '--font-helvetica-now-display'
 })
+
+const helveticaNowDisplayItalic = localFont({
+  display: 'swap',
+  src: '../../public/HelveticaNowDisplay-ThinIta.ttf',
+  variable: '--font-helvetica-now-display-italic'
+})
+
+const helveticaBold = localFont({
+  display: 'swap',
+  src: '../../public/Helvetica-Bold-Font.ttf',
+  variable: '--font-helvetica-bold'
+})
+
+
 
 const NeueMontrealBold = localFont({
     display: 'swap',
@@ -53,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${marckScript.variable} ${NeueMontrealRegular.variable} ${NeueMontrealBold.variable} ${helveticaNowDisplay.variable} ${playBall.variable}`}>{children}</body>
+      <body className={`${inter.className} ${marckScript.variable} ${NeueMontrealRegular.variable} ${NeueMontrealBold.variable} ${helveticaNowDisplay.variable} ${playBall.variable}  ${helveticaBold.variable} ${helveticaNowDisplayItalic}`} >{children}</body>
     </html>
   );
 }
