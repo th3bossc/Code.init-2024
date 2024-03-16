@@ -1,8 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from .views import ImageModelView
 
 app_name='imageModel'
 urlpatterns = [
-    path('', ImageModelView.as_view())
+    path('colourize/', ImageModelView.as_view()),
 ]

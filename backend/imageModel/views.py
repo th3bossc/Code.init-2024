@@ -1,8 +1,10 @@
 from rest_framework.views import APIView 
 from .utils.main import colorize, save_image, cleanup
 from django.http import FileResponse
-# Create your views here
 
+
+
+# [GET/POST] /api/colourize/
 class ImageModelView(APIView):
     def get(self):
         cleanup()
@@ -18,4 +20,7 @@ class ImageModelView(APIView):
         output_path = colorize(image_path)
         
         return FileResponse(open(output_path, "rb"), content_type="image/jpeg")
+    
+    
         
+# try out image captioning
