@@ -3,7 +3,7 @@ import LowerHero from "./components/LowerHero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="app">
         <UpperHero />
         <div className="lower">
             <LowerHero />
