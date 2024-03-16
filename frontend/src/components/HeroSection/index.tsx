@@ -11,7 +11,6 @@ const HeroSection = () => {
     const [scrollYProgress, setScrollYProgress] = useState(0);
     useEffect(() => {
         const calculateScrollYProgress = () => {
-            console.log(scrollPosition);
             if (scrollPosition > 0)
                 return 0;
             if (scrollPosition < -height + windowHeight)
