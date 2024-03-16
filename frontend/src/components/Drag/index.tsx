@@ -5,30 +5,41 @@ import Scribble from "../Scribble";
 import bottomLeftSVG from "/public/bottomLeftSVG.svg";
 import bottomRightSVG from "/public/bottomRightSVG.svg";
 import "./Drag.css"
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { useDropzone } from "react-dropzone";
+import { colourizeImage } from "@/lib";
 
 
 
-export default function Drag() {
-    const [file, setFile] = useState<File | null>(null); // Initialize file state with null
-    const [imag, setImag] = useState<string | null>(null);
+export default function Drag({
+    setFile,
+    imag,
+    setImag
+} : {
+    setFile : Dispatch<SetStateAction<File | null>>,
+    imag : string | null,
+    setImag : Dispatch<SetStateAction<string | null>>
+}) {
+    
     const { getRootProps, getInputProps } = useDropzone({
         onDrop: (acceptedFiles) => {
-            const selectedFile = acceptedFiles[0]; // Use the first accepted file
+            const selectedFile = acceptedFiles[0]; 
             setImag(URL.createObjectURL(selectedFile));
-            setFile(selectedFile); // Update file state using setFile
+            setFile(selectedFile);
+            colourizeImage(selectedFile);
         },
-        accept:'image/*', // Accept only image files
+        accept: {
+            'image/*': []
+        },
         multiple: false,
     });
 
     
     return (
         <>
-            {/* <div className='imageDisplay'>
-                <Image src={imag} alt='image to convert' />
-            </div> */}
+            {imag && <div className='imageDisplay'>
+                <img src={imag} alt='image to convert' />
+            </div>}
             <div className="imageUploader" {...getRootProps()}>
                 <input {...getInputProps()} style={{ display: "none" }} />
                 <label htmlFor="file" style={{ cursor: "pointer" }}>
