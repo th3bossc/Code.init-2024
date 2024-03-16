@@ -1,17 +1,11 @@
-import UpperHero from "../components/UpperHero";
-import LowerHero from "../components/LowerHero";
 import Drag from "../components/Drag";
-import Generated from "../components/Generated";
-import Footer from "../components/Footer";
-
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
 export default function Home() {
   return (
     <div className="App">
-      <UpperHero />
-      <div className="lower">
-        <LowerHero />
-        <Drag />
-      </div>
+      <HeroSection />
+      <Drag />
       <Footer />
     </div>
   );
