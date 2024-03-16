@@ -1,0 +1,24 @@
+.footer
+{
+    height:15vh;
+    width:100%;
+    background-color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.codeinit
+{
+    font-size:5rem;
+}
+
+.flipinit
+{
+    display:inline-block;
+    -moz-transform: scale(1, -1) !important; 
+    -webkit-transform: scale(1, -1) !important;
+    -o-transform: scale(1, -1) !important;
+    -ms-transform: scale(1, -1) !important;
+    transform: scale(1, -1) !important;
+}

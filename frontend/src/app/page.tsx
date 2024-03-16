@@ -3,7 +3,7 @@ import LowerHero from "../components/LowerHero";
 import Drag from "../components/Drag";
 import Box from "/public/gradientbox.svg";
 import Image from "next/image";
-
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
         <Image src={Box} alt = "gradientbox" />
         <Drag />
       </div>
+      <Footer />
     </div>
   );
 }

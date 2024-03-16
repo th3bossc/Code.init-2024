@@ -34,6 +34,7 @@
 
 .lowerHero
 {
-    position: relative;
+    position:-webkit-sticky;
+    position: sticky;
     height:50vh;
 }

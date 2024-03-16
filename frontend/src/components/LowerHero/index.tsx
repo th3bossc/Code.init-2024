@@ -11,8 +11,6 @@ export default function LowerHero() {
 
     const artScroll = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
-    console.log(scrollYProgress);
-
     return (
         <div className="lowerHero" ref={ref}>
             <div className="grayDiv">
