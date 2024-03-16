@@ -5,7 +5,7 @@
 body
 {
     background-color: #100E0E;
-    overflow: hidden;
+    
 }
 
 .lower
@@ -16,4 +16,9 @@ body
     overflow: hidden;
     background-color: #100e0e;
     background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+}
+
+
+.App{
+    overflow: hidden;
 }
