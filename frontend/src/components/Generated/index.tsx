@@ -1,13 +1,10 @@
 import React from 'react';
-import Image from "next/image";
-import 
+import "./Generated.css";
 
-const index = () => {
+export default function Generated(){
     return (
-        <div>
-            <Image />
+        <div className="generatedContainer">
+            <div className="generated"></div>
         </div>
     );
 };
-
-export default index;

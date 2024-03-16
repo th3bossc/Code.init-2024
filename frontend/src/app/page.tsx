@@ -1,8 +1,7 @@
 import UpperHero from "../components/UpperHero";
 import LowerHero from "../components/LowerHero";
 import Drag from "../components/Drag";
-import Box from "/public/gradientbox.svg";
-import Image from "next/image";
+import Generated from "../components/Generated";
 import Footer from "../components/Footer";
 
 export default function Home() {
