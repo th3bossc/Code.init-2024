@@ -56,5 +56,10 @@ def save_image(image_data, path):
         f.close()
     return path
 
-def delete_image(path):
-    os.remove(os.path.join(DIR, path))
+
+
+def cleanup():
+    if (os.path.exists(os.path.join(DIR, "input.jpg"))):
+        os.remove(os.path.join(DIR, "input.jpg"))
+    if (os.path.exists(os.path.join(DIR, "colorized.jpg"))):
+        os.remove(os.path.join(DIR, "colorized.jpg"))
