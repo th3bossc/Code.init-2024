@@ -11,6 +11,7 @@
 
 .drag--scribble--div { 
     position: relative;
+    
 }
 
 .drag--text {
@@ -23,6 +24,7 @@
     font-weight:bold;
     font-size: 105px;
     text-align: center;
+    transition : transform 0.5s;
 }
 
 .drag--svg--left { 
@@ -46,4 +48,8 @@
     position:absolute;
     right:4%;
     bottom:15%;
+}
+
+.drag--text:hover{
+    transform : scale(1.1);
 }
