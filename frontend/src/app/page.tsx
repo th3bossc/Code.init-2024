@@ -11,7 +11,6 @@ export default function Home() {
       <UpperHero />
       <div className="lower">
         <LowerHero />
-        <Image src={Box} alt = "gradientbox" />
         <Drag />
       </div>
       <Footer />

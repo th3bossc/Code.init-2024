@@ -1,4 +1,5 @@
-.drag--container{ 
+.drag--container
+{ 
     position: relative;
     margin-top:10rem;
     display : flex;
@@ -8,13 +9,8 @@
     width:100%;
 }
 
-.drag--text { 
-    color : white;
-}
-
 .drag--scribble--div { 
     position: relative;
-    display: inline-block;
 }
 
 .drag--text {
@@ -30,7 +26,8 @@
 }
 
 .drag--svg--left { 
-    align-items: end;
+    position:absolute;
+    left:4%;
 }
 
 .A, .O{
@@ -39,9 +36,9 @@
 
 
 .drag--text{
-    font-family : var(--font-neue-montreal-bold)
+    font-family : var(--font-neue-montreal-bold);
     position:absolute;
-    left:4%;
+    top:48%;
 }
 
 .drag--svg--right

@@ -6,7 +6,6 @@ const index = () => {
     return (
         <div>
             <Image />
-            
         </div>
     );
 };
