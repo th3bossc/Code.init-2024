@@ -49,3 +49,41 @@
     right:4%;
     bottom:15%;
 }
+
+.scribble{
+    transition: transform 1s;
+
+
+}
+
+.scribble:hover{
+    transform: scale(1.05);
+}
+
+.drag--svg--left, .drag--svg--right
+{
+    transition: transform 1s,top ease 1s;
+    
+}
+
+.drag--svg--left{
+    animation : floating 3s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+.drag--svg--right{
+    animation : floating 3s infinite ease-in-out;
+    animation-delay: 1.5s;
+}
+
+.drag--svg--left:hover, .drag--svg--right:hover
+{
+    transform: scale(1.2);
+}
+
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 40px); }
+    100%   { transform: translate(0, -0px); }    
+}
