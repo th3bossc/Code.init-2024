@@ -16,7 +16,9 @@ export default function Drag() {
             <Image className="drag--svg--left" src={bottomLeftSVG} alt="rightSVG" />
             <div className="drag--scribble--div">
                 <h2 className="drag--text">DR<span className="A" >A</span>G/BR<span className="O">O</span>WSE IMAGES</h2>
-                <Scribble />
+                <div className="scribble">
+                 <Scribble />
+                </div>
             </div>
             <Image className="drag--svg--right" src={bottomRightSVG} alt="rightSVG" />
         </div>

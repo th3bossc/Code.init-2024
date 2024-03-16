@@ -12,6 +12,7 @@
     color:white;
     text-align:center;
     font-family: var(--font-neue-montreal-regular);
+    animation : fade-in-down 2s;
 }
 
 .svgLeft
@@ -19,6 +20,7 @@
     position:absolute;
     top:30%;
     left:7%;
+    
 }
 
 .svgRight
@@ -35,6 +37,8 @@
     width:100%;
     text-align: center;
     font-family: var(--font-helvetica-now-display);
+    animation : fade-in-down 2s;
+    animation-delay : 0.5s;
 }
 
 .colourized {
@@ -64,4 +68,15 @@
     font-family: var(--font-playball);
     margin-right : 10px;
     font-size: 105%;
+}
+
+@keyframes fade-in-down { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px);
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    } 
 }
