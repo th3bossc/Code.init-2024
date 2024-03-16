@@ -1,15 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import Drag from "../components/Drag";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
 import Generated from "@/components/Generated";
 
 export default function Home() {
+  const [generated, setGenerated] = useState(false);
   return (
-    <div className="App">
-      <HeroSection />
-      <Drag />
-      <Generated />
-      <Footer />
-    </div>
+    <>
+      {
+        generated ? (
+          <Generated />
+        ) : (
+          <Drag />
+        )
+      }
+    </>
   );
 }
