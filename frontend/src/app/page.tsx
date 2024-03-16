@@ -6,19 +6,23 @@ import Generated from "@/components/Generated";
 
 
 export default function Home() {
-  const [generated, setGenerated] = useState(false);
   const [file, setFile] = useState<File | null>(null); // Initialize file state with null
-  const [imag, setImag] = useState<string | null>(null);
+  const [image, setImage] = useState<string | null>(null);
+  const [generatedImage, setGeneratedImage] = useState<any>(null);
   return (
     <>
       {
-        generated ? (
-          <Generated />
+        generatedImage ? (
+          <Generated
+          // original={image}
+          // generated={generatedImage}
+          />
         ) : (
-          <Drag 
+          <Drag
             setFile={setFile}
-            imag={imag}
-            setImag={setImag}
+            image={image}
+            setImage={setImage}
+            setGeneratedImage={setGeneratedImage}
           />
         )
       }

@@ -13,35 +13,37 @@ import { colourizeImage } from "@/lib";
 
 export default function Drag({
     setFile,
-    imag,
-    setImag
-} : {
-    setFile : Dispatch<SetStateAction<File | null>>,
-    imag : string | null,
-    setImag : Dispatch<SetStateAction<string | null>>
+    image,
+    setImage,
+    setGeneratedImage
+}: {
+    setFile: Dispatch<SetStateAction<File | null>>,
+    image: string | null,
+    setImage: Dispatch<SetStateAction<string | null>>,
+    setGeneratedImage: Dispatch<SetStateAction<any>>
 }) {
-    
     const { getRootProps, getInputProps } = useDropzone({
-        onDrop: (acceptedFiles) => {
-            const selectedFile = acceptedFiles[0]; 
-            setImag(URL.createObjectURL(selectedFile));
+        onDrop: async (acceptedFiles: any) => {
+            const selectedFile = acceptedFiles[0];
+            setImage(URL.createObjectURL(selectedFile));
             setFile(selectedFile);
-            colourizeImage(selectedFile);
+            const img = await colourizeImage(selectedFile);
+            setGeneratedImage(img);
         },
         accept: {
             'image/*': []
-        },
+        },
         multiple: false,
     });
 
-    
+
     return (
         <>
-            {imag && <div className='imageDisplay'>
-                <img src={imag} alt='image to convert' />
-            </div>}
-            <div className="imageUploader" {...getRootProps()}>
-                <input {...getInputProps()} style={{ display: "none" }} />
+            {/* {image && <div className='imageDisplay'>
+                <Image src={image} alt='image to convert' width={100} height={100} />
+            </div>} */}
+            <form className="imageUploader" {...getRootProps()}>
+                <input {...getInputProps()} style={{ display: 'none' }} />
                 <label htmlFor="file" style={{ cursor: "pointer" }}>
                     <div className="drag--container">
                         <Image className="drag--svg--left" src={bottomLeftSVG} alt="rightSVG" />
@@ -52,8 +54,8 @@ export default function Drag({
                         <Image className="drag--svg--right" src={bottomRightSVG} alt="rightSVG" />
                     </div>
                 </label>
-            </div>
-        </>
+            </form>
+        </>
 
     );
 }

@@ -41,9 +41,9 @@ def colorize(image_path):
     colorized = colorized.astype(np.uint8)
     
     # cv2.imshow("Original", image)
-    # cv2.imshow("Colorized", colorized)
+    cv2.imshow("Colorized", colorized)
     
-    # cv2.waitKey(0)
+    cv2.waitKey(0)
     
     cv2.imwrite(os.path.join(DIR, "colorized.jpg"), colorized)
     return os.path.join(DIR, "colorized.jpg")
