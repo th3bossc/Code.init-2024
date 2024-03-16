@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import Drag from "../components/Drag";
-import Generated from "@/components/Generated";
+import ImageEditor from "../components/ImageEditor";
 
 export default function Home() {
-  const [generated, setGenerated] = useState(false);
+  const [generated, setGenerated] = useState(true);
   return (
     <>
       {
         generated ? (
-          <Generated />
+          <ImageEditor />
         ) : (
           <Drag />
         )
