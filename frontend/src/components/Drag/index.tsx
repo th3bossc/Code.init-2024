@@ -7,12 +7,15 @@ import bottomRightSVG from "/public/bottomRightSVG.svg";
 import "./Drag.css"
 
 
+
+
 export default function Drag() {
+    
     return (
         <div className="drag--container">
             <Image className="drag--svg--left" src={bottomLeftSVG} alt="rightSVG" />
             <div className="drag--scribble--div">
-                <h2 className="drag--text">DRAG/BROWSE IMAGES</h2>
+            <h2 className="drag--text">DR<span className="A" >A</span>G/BR<span className="O">O</span>WSE IMAGES</h2>
                 <Scribble />
             </div>
             <Image className="drag--svg--right" src={bottomRightSVG} alt="rightSVG" />

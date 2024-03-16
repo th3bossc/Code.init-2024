@@ -10,6 +10,7 @@
     font-size: 12rem;
     color:white;
     text-align:center;
+    font-family: var(--font-neue-montreal-regular);
 }
 
 .svgLeft
@@ -32,6 +33,7 @@
     font-size:1.2rem;
     width:100%;
     text-align: center;
+    font-family: var(--font-helvetica-now-display);
 }
 
 .colourized {
@@ -54,4 +56,11 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+
+.Y{
+    font-family: var(--font-playball);
+    margin-right : 10px;
+    font-size: 105%;
 }
