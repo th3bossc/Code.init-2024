@@ -18,11 +18,7 @@ export default function Generated() {
         <div className="generatedContainer">
             <div className="generated">
                 <div className="generatedImage">
-                    <div className="w-full rounded-md overflow-hidden">
-                        <ReactCompareImage leftImage="/HeroArtGray.png" sliderLineWidth={1} rightImage="/HeroArt.jpg" handleSize={18} />
-                    </div>
-                </div>
-                <div className='editOptions'>
+                    <ReactCompareImage leftImage="/HeroArtGray.png" sliderLineWidth={1} rightImage="/HeroArt.jpg" handleSize={18} />
                 </div>
             </div>
         </div>

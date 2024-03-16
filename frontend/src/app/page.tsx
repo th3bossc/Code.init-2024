@@ -6,7 +6,7 @@ import Generated from "@/components/Generated";
 export default function Home() {
   return (
     <div className="App">
-      <HeroSection />
+      <HeroSection />   
       <Drag />
       <Generated />
       <Footer />
