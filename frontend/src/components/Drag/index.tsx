@@ -5,6 +5,7 @@ import Image from "next/image";
 import scribble from "/public/scribble.svg";
 // import Spline from '@splinetool/react-spline';
 import Scribble from "../Scribble";
+import "./Drag.css"
 
 
 export default function Drag() {

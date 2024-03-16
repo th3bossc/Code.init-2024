@@ -1,0 +1,35 @@
+.drag--container{ 
+    display : flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height : 100vh;
+}
+
+.drag--text { 
+    color : white;
+}
+
+.drag--scribble--div { 
+    position: relative;
+    display: inline-block;
+    
+
+}
+
+.drag--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1; 
+    font-weight:bold;
+    font-size: 105px;
+    text-align: center;
+   
+}
+
+.drag--svg--left { 
+    position:absolute;
+    
+}
