@@ -1,6 +1,8 @@
 import UpperHero from "../components/UpperHero";
 import LowerHero from "../components/LowerHero";
 import Drag from "../components/Drag";
+import Footer from "../components/Footer";
+
 export default function Home() {
   return (
     <div className="App">
@@ -9,6 +11,7 @@ export default function Home() {
         <LowerHero />
         <Drag />
       </div>
+      <Footer />
     </div>
   );
 }
