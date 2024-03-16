@@ -14,9 +14,10 @@
 
 .svgLeft
 {
+    transform: scale(0.2);
     position:absolute;
-    top:25%;
-    left:7%;
+    top:-20%;
+    left:-40%;
 }
 
 .svgRight
@@ -34,9 +35,24 @@
     text-align: center;
 }
 
-.colourized
-{
-    background: -webkit-linear-gradient(180deg,#02ff24, #06dcf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.colourized {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
