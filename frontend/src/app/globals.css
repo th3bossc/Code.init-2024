@@ -2,29 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-*
-{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body
-{
+body {
     background-color: #100E0E;
 }
 
 
-.lower
-{
+.lower {
     border-top: white 2px solid;
-    height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    height: 100%;
     background-color: #100e0e;
     background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 }
 
 
-.App{
+.App {
     overflow: hidden;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }

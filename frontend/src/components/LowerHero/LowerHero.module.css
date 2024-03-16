@@ -1,0 +1,55 @@
+.grayDiv {
+    position: absolute;
+    margin-top: 3vh;
+    height: 44vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+}
+
+.art {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.colored {
+    z-index: 1;
+}
+
+.colorDiv {
+    position: absolute;
+    margin-top: 3vh;
+    height: 44vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+}
+
+.lowerHero {
+    height: 300dvh;
+    outline: 1px solid red;
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 300dvh;
+}
+
+.sticky-div {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    outline: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    overflow: hidden;
+}
