@@ -1,0 +1,53 @@
+.editor--container{
+    display : flex;
+    flex-direction : column;
+    transform : scale(0.85);
+    height : 120vh;
+
+}
+
+.editor--image{
+    transform : scale(1.5);
+    margin-bottom : 0;
+}
+
+.below-picture{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    width:75vw;
+}
+
+.button{
+    width : 15vw;
+}
+
+.slider{
+    width : 40vw;
+    display :flex;
+    flex-direction:column;
+    justify-content: center;
+     
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    height : 40vh;
+    justify-content:space-evenly;
+}
+
+.reset-button{
+    transform: scale(0.29);
+    transition : trasnform 0.5s ease-in-out;
+}
+
+
+.reset-button:hover{
+    transform: scale(0.24);
+    cursor: pointer;
+    transition : 0.5s;
+}
+
+

@@ -10,22 +10,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 const marckScript = Marck_Script({
-    subsets: ["latin"], 
-    weight: ['400'],
-    variable: '--font-marck-script'
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: '--font-marck-script'
 });
 
 
 const playBall = Playball({
-    subsets: ["latin"], 
-    weight: ['400'],
-    variable: '--font-playball'
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: '--font-playball'
 });
 
 const helveticaNowDisplay = localFont({
-    display: 'swap',
-    src: '../../public/HelveticaNowDisplay-Thin.ttf',
-    variable: '--font-helvetica-now-display'
+  display: 'swap',
+  src: '../../public/HelveticaNowDisplay-Thin.ttf',
+  variable: '--font-helvetica-now-display'
 })
 
 const helveticaNowDisplayItalic = localFont({
@@ -43,15 +43,15 @@ const helveticaBold = localFont({
 
 
 const NeueMontrealBold = localFont({
-    display: 'swap',
-    src: '../../public/NeueMontreal-Bold.otf',
-    variable: '--font-neue-montreal-bold'
+  display: 'swap',
+  src: '../../public/NeueMontreal-Bold.otf',
+  variable: '--font-neue-montreal-bold'
 })
 
 const NeueMontrealRegular = localFont({
-    display: 'swap',
-    src: '../../public/NeueMontreal-Regular.otf',
-    variable: '--font-neue-montreal-regular'
+  display: 'swap',
+  src: '../../public/NeueMontreal-Regular.otf',
+  variable: '--font-neue-montreal-regular'
 })
 
 
