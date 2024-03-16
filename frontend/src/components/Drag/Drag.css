@@ -30,6 +30,18 @@
 }
 
 .drag--svg--left { 
-    position:absolute;
+
+    align-items: end    ;
     
+}
+
+.A, .O{
+    font-family: var(--font-marck-script);
+    
+
+}
+
+
+.drag--text{
+    font-family : var(--font-neue-montreal-bold)
 }
