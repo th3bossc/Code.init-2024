@@ -5,6 +5,8 @@
     height: 100vh;
     width: 100vw;
     flex-direction: column;
+    max-height: 800px;
+    overflow: hidden;
 }
 
 .generated {
@@ -15,6 +17,8 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    max-height: 800px;
+    overflow: hidden;
 }
 
 .generatedImage {
@@ -23,6 +27,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 800px;
+    overflow: hidden;
+
 }
 
 .editOptions {
